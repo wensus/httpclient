@@ -11,6 +11,11 @@ namespace Wensus
         private const string webPerformanceAction = "webperf";
         private readonly Stopwatch timer;
 
+        public HttpPerformanceHandler()
+            : base(new HttpClientHandler())
+        {
+        }
+
         public HttpPerformanceHandler(HttpMessageHandler innerHandler)
             : base(innerHandler)
         {
